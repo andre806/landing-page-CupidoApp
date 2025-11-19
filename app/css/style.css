@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+/* Additional styles */
+@import './additional-styles/utility-patterns.css' layer(components);
+@import './additional-styles/theme.css';
+
+@plugin "@tailwindcss/forms" {
+  strategy: base;
+}
+
+/* CupidoApp color palette */
+:root {
+  --cupido-primary: #b993d6;
+  --cupido-secondary: #8ca6db;
+  --cupido-accent: #e0aaff;
+  --cupido-pink: #e7b2ff;
+  --cupido-purple: #a259c6;
+  --cupido-blue: #8ca6db;
+  --cupido-bg-gradient: linear-gradient(135deg, #b993d6 0%, #e7b2ff 100%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #b993d6 0%, #8ca6db 100%);
+  color: #2d1e4a;
+  min-height: 100vh;
+}
+
+/* Professional card and button styles */
+.cupido-card {
+  background: var(--cupido-bg-gradient);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(162, 89, 198, 0.12);
+  padding: 2rem;
+  color: #2d1e4a;
+}
+
+.cupido-btn {
+  background: var(--cupido-purple);
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(162, 89, 198, 0.15);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.cupido-btn:hover {
+  background: var(--cupido-accent);
+  color: #2d1e4a;
+}
+
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
