@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "CupidoApp",
+  description: "conectando almas",
 };
 
 import PageIllustration from "@/components/page-illustration";
